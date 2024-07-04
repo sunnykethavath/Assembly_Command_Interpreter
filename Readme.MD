@@ -73,7 +73,7 @@ docker network connect <network_name> <mysql_container_name>
 
 ### Run SpringBoot application docker container and connect to network
 ```bash
-docker run -p <port_you_want_to_expose:8080> --name <springboot_application_container_name> --net <network_name> -e MYSQL_HOST=<mysql_container_name> -e MYSQL_USER=root -e MYSQL_PORT=3306 <springboot_application_image_name>:<version>
+docker run -p <port_you_want_to_expose:8080> --name <springboot_application_container_name> --net <network_name> -e MYSQL_HOST=<mysql_container_name> -e MYSQL_USER=root -e MYSQL_PASSWORD=root -e MYSQL_PORT=3306 <springboot_application_image_name>:<version>
 ```
 
 ## Usage

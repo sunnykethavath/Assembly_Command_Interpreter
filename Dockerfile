@@ -1,3 +1,4 @@
 FROM openjdk:21-jdk
-ADD target/app.jar assemblyinterpreter.jar
-ENTRYPOINT ["java", "-jar", "/assemblyinterpreter.jar"]
+WORKDIR /app
+ADD target/app.jar app/assemblyinterpreter.jar
+ENTRYPOINT ["java", "-jar", "app/assemblyinterpreter.jar"]
